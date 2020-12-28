@@ -1,0 +1,18 @@
+Week 1 program-
+1.Reverse linked list
+def reverseList(head):
+    if head is None or head.next is None :
+        return head
+    prev = None
+    current = head
+    while(current):
+        next = current.next
+        current.next = prev
+        prev = current
+        current = next
+    head = prev
+    return head
+Input:
+1 2 3 4 5
+Output :
+5 4 3 2 1
